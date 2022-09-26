@@ -4,8 +4,9 @@
 > And hw2 is done in this branch
 
 *Here are steps of this homework.*
-1. Set up input strings: name, date of birth, and bio about_me.
-2. After users inputing information, use std::getline to save for later.
-3. Finally, print out all information in certain form.
+1. Create a file called hw2_file.cpp, in order to code homework in it, using 'touch hw2_file.cpp'. 
+2. Set up function main and three strings in it, name, dob(date of birth), and about_me. The user need to input these three information to go forward.
+3. 
+4. Finally, print out all information in certain form.
 
 That's all for the homework 2.
