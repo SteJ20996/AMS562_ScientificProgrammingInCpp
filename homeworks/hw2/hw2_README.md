@@ -1,7 +1,6 @@
 **This is the README file for homework 2.**
 
-> Create a new branch called branch_hw2
-> And hw2 is done in this branch
+> Create a new branch called branch_hw2, and hw2 is done in this branch.
 
 *Here are steps of this homework.*
 1. Create a file called hw2_file.cpp, in order to code homework in it, using `touch hw2_file.cpp`.
