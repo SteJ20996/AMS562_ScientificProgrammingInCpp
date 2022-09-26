@@ -30,5 +30,7 @@
     ```
 6. Here is all about hw2 coding part.
 7. Use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch.
+8. Use `git merge` to merge the branch_hw2 to the main.
+9. Use `git push` to push changes to the GitHub.
 
 That's all for the homework 2.
