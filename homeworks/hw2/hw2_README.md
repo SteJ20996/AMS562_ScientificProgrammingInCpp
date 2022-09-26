@@ -7,7 +7,7 @@
 1. Create a file called hw2_file.cpp, in order to code homework in it, using `touch hw2_file.cpp`.
 2. Set up function main and three strings in it, name, dob(date of birth), and about_me. The user need to input these three information to go forward.
    `std::string name, dob, about_me;`
-3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline`
+3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline(std::cin, ___)`
     ```
     std::cout << "Please enter name...\n";
     std::getline(std::cin, name);
