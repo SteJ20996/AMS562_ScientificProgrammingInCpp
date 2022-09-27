@@ -12,7 +12,7 @@ int main(){
     std::cout << "\n";
 
     std::cout << "AMS562 hw2 Info Collector: " << name << "\n";
-    std::cout << "    " << "DOB: " << dob << std::endl;
-    std::cout << "    " << "Bio: " << bio << std::endl << "\n";
+    std::cout << "\t" << "DOB: " << dob << std::endl;
+    std::cout << "\t" << "Bio: " << bio << std::endl << "\n";
     return 0;
 }
