@@ -22,7 +22,7 @@
     std::cout << "Please enter your brief bio...\n";
     std::getline(std::cin, about_me);
     ```
-4. Then design the output page, by using `std::cout std::endl`.
+4. Then design the output page, by using `std::cout std::endl` and use `\n` to set a new line, `\t` to make a horizontal tap space.
     ```
     std::cout << "AMS562 hw2 Personal Information Collector: " << name << "\n";
     std::cout << "\t" << "DOB: " << dob << std::endl;
