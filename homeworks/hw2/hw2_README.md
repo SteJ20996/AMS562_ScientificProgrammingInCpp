@@ -4,8 +4,8 @@
 
 *Here are steps of this homework.*
 1. Create a file called hw2_file.cpp, in order to code homework in it, using `touch hw2_file.cpp`.
-2. Set up function main and three strings in it, name, dob(date of birth), and about_me. The user need to input these three information to go forward.
-   `std::string name, dob, about_me;`
+2. Set up function main and three strings in it, name, dob(date of birth), and bio. The user need to input these three information to go forward.
+   `std::string name, dob, bio;`
 3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline(std::cin, ___)`
     Entering name:
     ```
@@ -20,13 +20,13 @@
     Entering brief biography:
     ```
     std::cout << "Please enter your brief bio...\n";
-    std::getline(std::cin, about_me);
+    std::getline(std::cin, bio);
     ```
 4. Then design the output page, by using `std::cout std::endl` and use `\n` to set a new line, `\t` to make a horizontal tap space.
     ```
     std::cout << "AMS562 hw2 Personal Information Collector: " << name << "\n";
     std::cout << "\t" << "DOB: " << dob << std::endl;
-    std::cout << "\t" << "Bio: " << about_me << std::endl << "\n";
+    std::cout << "\t" << "Bio: " << bio << std::endl << "\n";
     ```
 5. After user entering all strings, the final output likes this, for example:
     ```
