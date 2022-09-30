@@ -37,7 +37,7 @@
 6. After several lines of editting, I use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch. This process can be done a few times.
 7. Use `git checkout main` to switch to main branch.
 8. Use `git merge branch_hw2` to merge the branch_hw2 to the main, can also be followed by `--strategy-option=theirs` to merge changes in accordance with files in branch_hw2.
-9. Use `git push` to push changes to the GitHub, so others can check my GitHub account for further updates.
+9. Use `git push` to push changes to the GitHub, so others can check my GitHub account for updates.
 10. At last, create a pull request on GitHub, by:
     * Switch to branch_hw2,
     * Click Contribute button,
