@@ -3,10 +3,9 @@
 > Create a new branch called branch_hw2, and hw2 is done in this branch.
 
 *Here are steps of this homework.*
-1. Create a file called hw2_file.cpp, in order to code homework in it, using `touch hw2_file.cpp`.
-2. Set up function main and three strings in it, name, dob(date of birth), and bio. The user need to input these three information to go forward.
-   `std::string name, dob, bio;`
-3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline(std::cin, ___)`
+1. Create a file called hw2_file.cpp, in order to code c++ homework in it, using command `touch hw2_file.cpp`.
+2. Set up function `int main(){}` and initialize three strings in it, name, dob(date of birth), and bio. Command `std::string name, dob, bio;`. These are three information user need to input to go forward.
+3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline(std::cin, ___)` (Input string on underline).
     Entering name:
     ```
     std::cout << "Please enter name...\n";
@@ -22,7 +21,7 @@
     std::cout << "Please enter your brief bio...\n";
     std::getline(std::cin, bio);
     ```
-4. Then design the output page, by using `std::cout std::endl` and use `\n` to set a new line, `\t` to make a horizontal tap space.
+4. Then design the output page, by using `std::cout std::endl` and use escape sequences such as`\n` to set a new line, `\t` to make a horizontal tap space.
     ```
     std::cout << "AMS562 hw2 Personal Information Collector: " << name << "\n";
     std::cout << "\t" << "DOB: " << dob << std::endl;
@@ -34,9 +33,16 @@
         DOB: 01\01\2000
         Bio: I'm a student in Stony Brook University.
     ```
-6. Here is all about hw2 coding part.
-7. Use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch.
-8. Use `git merge` to merge the branch_hw2 to the main.
-9.  Use `git push` to push changes to the GitHub.
+   Here is all about hw2 coding part.
+6. After several lines of editting, I use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch. This process can be done a few times.
+7. Use `git checkout main` to switch to main branch.
+8. Use `git merge branch_hw2` to merge the branch_hw2 to the main, can also be followed by `--strategy-option=theirs` to merge changes in accordance with files in branch_hw2.
+9. Use `git push` to push changes to the GitHub, so others can check my GitHub account for further updates.
+10. At last, create a pull request on GitHub, by:
+    * Switch to branch_hw2,
+    * Click Contribute button,
+    * Click Openpull request,
+    * Edit title and comment,
+    * Submit the Pull Request.
 
 That's all for the homework 2.
