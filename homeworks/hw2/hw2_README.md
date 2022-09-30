@@ -3,9 +3,8 @@
 > Create a new branch called branch_hw2, and hw2 is done in this branch.
 
 *Here are steps of this homework.*
-1. Create a file called hw2_file.cpp, in order to code homework in it, using `touch hw2_file.cpp`.
-2. Set up function main and three strings in it, name, dob(date of birth), and bio. The user need to input these three information to go forward.
-   `std::string name, dob, bio;`
+1. Create a file called hw2_file.cpp, in order to code c++ homework in it, using command `touch hw2_file.cpp`.
+2. Set up function `int main(){}` and initialize three strings in it, name, dob(date of birth), and bio. Command `std::string name, dob, bio;`. These are three information user need to input to go forward.
 3. Friendly tips for user to input information, using `std::cout`, and store them by using  `std::getline(std::cin, ___)`
     Entering name:
     ```
@@ -34,9 +33,9 @@
         DOB: 01\01\2000
         Bio: I'm a student in Stony Brook University.
     ```
-6. Here is all about hw2 coding part.
-7. Use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch.
-8. Use `git merge` to merge the branch_hw2 to the main.
-9.  Use `git push` to push changes to the GitHub.
+   Here is all about hw2 coding part.
+6. Use `git add .` and `git commit -m "__"` to commit creation and changes to the local branch.
+7. Use `git merge` to merge the branch_hw2 to the main.
+8.  Use `git push` to push changes to the GitHub.
 
 That's all for the homework 2.
