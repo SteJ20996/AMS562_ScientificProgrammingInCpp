@@ -7,16 +7,24 @@ int main(int argc, char *argv[]) {
   double h = 0.0;
 
   // sanity check of argc
-  if(argc>1){
+  if(argc>2){
     std::cout << "Only one h value needed" << std::endl;
+    return -1;
   }
-  else{
+  else if(argc<2){
     std::cout << "Need to enter one h value" << std::endl;
+    return -1;
   }
 
 
-  // get h from command line
-  double h = std::atof(h);
+  // get h from command line and sanity check of argv
+  char* string_h = argv[1]; // get the input h
+  if (!(h=std::atof(string_h))){  // If the return value is 0, it means that h is invalid
+    std::cout << "Invalid input h" << std::endl;
+    return -1;
+  }
+  std::cout << h << std::endl; // print the input number out
+
 
   // compute forward difference
   double yfd = (sin(pi_4+h)-sin(pi_4))/h;
