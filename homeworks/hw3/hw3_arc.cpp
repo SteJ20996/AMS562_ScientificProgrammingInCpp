@@ -8,11 +8,11 @@ static void genPointsOnUnitSphere(const int N, float *x, float *y, float *z);
 int main(int argc, char *argv[]) {
   // parse input argc/argv
   if(argc>2){
-    std::cout << "Only one h value needed" << std::endl;
+    std::cout << "Only one argument needed" << std::endl;
     return -1;
   }
   else if(argc<2){
-    std::cout << "Need to enter one h value" << std::endl;
+    std::cout << "Need one argument" << std::endl;
     return -1;
   }
 
@@ -22,9 +22,9 @@ int main(int argc, char *argv[]) {
   float *x = nullptr, *y = nullptr, *z = nullptr;
 
   // allocate memory for x, y, z
-  x = new float [N]
-  y = new float [N]
-  z = new float [N]
+  x = new float [N];
+  y = new float [N];
+  z = new float [N];
 
   genPointsOnUnitSphere(N, x, y, z);
 
