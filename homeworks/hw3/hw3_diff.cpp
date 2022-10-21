@@ -7,12 +7,8 @@ int main(int argc, char *argv[]) {
   double h = 0.0;
 
   // sanity check of argc
-  if(argc>2){
-    std::cout << "Only one h value needed" << std::endl;
-    return -1;
-  }
-  else if(argc<2){
-    std::cout << "Need to enter one h value" << std::endl;
+  if(argc!=2){
+    std::cout << "Need only one h value" << std::endl;
     return -1;
   }
 
