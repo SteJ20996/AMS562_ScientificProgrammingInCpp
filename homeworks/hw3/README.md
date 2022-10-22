@@ -7,4 +7,4 @@
 #### Part I
 1. Sanity check whether argument count, argc, is provided. If not, exit the program and tell user which error was made.
 `if(argc!=2){std::cout << "Need only one h value" << std::endl;return -1;}`
-2. Check if input h is valid
+2. After getting the value of input h, by using `char* string_h = argv[1];`, check if input h is valid
