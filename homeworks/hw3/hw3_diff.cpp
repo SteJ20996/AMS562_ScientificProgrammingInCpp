@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
   // get h from command line and sanity check of argv
   char* string_h = argv[1]; // get the input h
-  if (!(h=std::atof(string_h))){  // If the return value is 0, it means that h is invalid
+  if (!(h=std::atof(string_h))){  // if h here not equals to the input, then return error
     std::cout << "Invalid input h" << std::endl;
     return -1;
   }
