@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     std::cout << "Invalid input h" << std::endl;
     return -1;
   }
-  std::cout << "h value is: "  << h << std::endl; // print the input number out
+  std::cout << "h value is: " << h << std::endl; // print the input number out
 
 
   // compute forward difference
