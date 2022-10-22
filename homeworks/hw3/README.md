@@ -27,7 +27,7 @@ Both methods are compared to true value of y prime of sin(x), cos(x), to determi
 Tips for running: First run program, then enter for example 
 `./hw3_diff 1e-3` in the same directory as hw3_diff.cpp file, the answer will be shown.
 
-Error for certain method at certain h:
+Error for certain methods at certain h:
 
 ```
 h value: finite diff, center-diff
