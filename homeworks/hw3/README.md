@@ -10,9 +10,10 @@
 2. After getting the value of input h, by using `char* string_h = argv[1];`, check if input h is valid, `if (!(h=std::atof(string_h))){std::cout << "Invalid input h" << std::endl; return -1;}`, if h here not equals to the input value, return error, else if h is valid, print out the h for further reference.
 3. Define y prime of sin(x) using finite difference method, `double yfd = (sin(pi_4+h)-sin(pi_4))/h;`, and also using center-difference method, `double ycd = (sin(pi_4+h)-sin(pi_4-h))/(2*h);`. Both methods are compared to true value of y prime of sin(x), cos(x), to determine error, `double e_yfd = cos(pi_4)-yfd;` and `double e_ycd = cos(pi_4)-ycd;`.
 4. Finally, print out error made by each method.
-Error for certain method:
-| h value | finite diff | center-diff |   |   |
-|---------|-------------|-------------|---|---|
-| 10^-1   | 1           | 2           |   |   |
-| 10^-2   | 3           | 4           |   |   |
-| 10^-3   | 5           | 6           |   |   |
+Error for certain method at certain h:
+h value: finite diff, center-diff
+10^-1: 0.0365038, 0.00117792
+10^-2: 0.00354729, 1.17851e-05
+10^-3: 0.000353671, 1.17851e-07
+10^-4: 3.53565e-05, 1.17859e-09
+10^-16: -0.403116, 0.151995
