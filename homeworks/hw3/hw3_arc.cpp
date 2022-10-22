@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   // get the size of N
 
   double ub = 0; // upper bound, need to as small as possible
-  double lb = std::numeric_limits<double>::infinity();; // lower bound, need to as large as possible
+  double lb = std::numeric_limits<double>::infinity(); // lower bound, need to as large as possible
   N = std::atof(argv[1]); // get N
 
   float *x = nullptr, *y = nullptr, *z = nullptr;
