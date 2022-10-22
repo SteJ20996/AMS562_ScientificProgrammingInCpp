@@ -42,7 +42,7 @@ h value: finite diff, center-diff
 
 2. Define upper bound and lower bound for all random arc, and set iteration number N the same as the user input in.
 `double ub = 0;`
-`double lb = std::numeric_limits<double>::infinity();;`
+`double lb = std::numeric_limits<double>::infinity();`
 `int N = std::atof(argv[1]);`
 
 3. Set three float pointers
