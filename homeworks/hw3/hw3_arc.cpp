@@ -26,17 +26,16 @@ int main(int argc, char *argv[]) {
   y = new float [N];
   z = new float [N];
 
-  genPointsOnUnitSphere(N, x, y, z);
-
   // determine the extreme arc lengths
-  for(int i=0;i<N;++i){ // exact N iterations
-    if(i>=1){
-        double arc=acos(x[i]*x[0]+y[i]*y[0]+z[i]*z[0]);
-        ub=std::max(arc,ub);
-        lb=std::min(arc,lb);
+  for(int i = 0; i < N; ++i){ // exact N iterations
+    genPointsOnUnitSphere(N, x, y, z);
+    if(i >= 1){
+        double arc=acos(x[i] * x[0] + y[i] * y[0] + z[i] * z[0]);
+        ub = std::max(arc,ub);
+        lb = std::min(arc,lb);
     }
   }
-  std::cout << "When iteration number is: " << N << std::endl;
+  std::cout << "When iteration count is: " << N << std::endl;
   std::cout << "Max arc is: " << ub << std::endl;
   std::cout << "Min arc is: " << lb << std::endl;
 
