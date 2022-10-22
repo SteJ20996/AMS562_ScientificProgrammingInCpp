@@ -83,4 +83,10 @@ delete [] z;
 
 6. Tips for running: First run program, then enter for example 
 `./hw3_arc 9` in the same directory as hw3_arc.cpp file, the answer will be shown.
-The outputs are totally random, here is one output of running:
+Because outputs are totally random, here is one output of running:
+
+```
+When iteration count is: 9
+Max arc is 2.87586
+Min arc is 0.263812
+```
