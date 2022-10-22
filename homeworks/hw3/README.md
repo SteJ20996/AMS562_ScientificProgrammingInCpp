@@ -28,12 +28,15 @@ Tips for running: First run program, then enter for example
 `./hw3_diff 1e-3` in the same directory as hw3_diff.cpp file, the answer will be shown.
 
 Error for certain method at certain h:
+
+```
 h value: finite diff, center-diff
 10^-1: 0.0365038, 0.00117792
 10^-2: 0.00354729, 1.17851e-05
 10^-3: 0.000353671, 1.17851e-07
 10^-4: 3.53565e-05, 1.17859e-09
 10^-16: -0.403116, 0.151995
+```
 
 #### Part II
 
