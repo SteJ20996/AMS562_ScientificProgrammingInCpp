@@ -7,17 +7,17 @@ static void genPointsOnUnitSphere(const int N, float *x, float *y, float *z);
 
 int main(int argc, char *argv[]) {
   // parse input argc/argv
-  if(argc>2){
-    std::cout << "Only one argument needed" << std::endl;
-    return -1;
-  }
-  else if(argc<2){
-    std::cout << "Need one argument" << std::endl;
+  if(argc!=2){
+    std::cout << "Need only one argument" << std::endl;
     return -1;
   }
 
   int N = 0;
   // get the size of N
+
+  double ub = 0; // upper bound, need to as small as possible
+  double lb = std::numeric_limits<double>::infinity();; // lower bound, need to as large as possible
+  N = std::atof(argv[1]); // get N
 
   float *x = nullptr, *y = nullptr, *z = nullptr;
 
@@ -29,12 +29,21 @@ int main(int argc, char *argv[]) {
   genPointsOnUnitSphere(N, x, y, z);
 
   // determine the extreme arc lengths
-
+  for(int i=0;i<N;++i){ // exact N iterations
+    if(i>=1){
+        double arc=acos(x[i]*x[0]+y[i]*y[0]+z[i]*z[0]);
+        ub=std::max(arc,ub);
+        lb=std::min(arc,lb);
+    }
+  }
+  std::cout << "When iteration number is: " << N << std::endl;
+  std::cout << "Max arc is: " << ub << std::endl;
+  std::cout << "Min arc is: " << lb << std::endl;
 
   // relax memory
-  free(x);
-  free(y);
-  free(z);
+  delete [] x;
+  delete [] y;
+  delete [] z;
 
   return 0;
 }
