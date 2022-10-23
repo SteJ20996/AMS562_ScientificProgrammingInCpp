@@ -32,7 +32,9 @@ int main(int argc, char *argv[]) {
   double e_ycd = cos(pi_4)-ycd;
 
   // print results
+  std::cout << "Derivative of sin(pi/4) using forward difference formula is: " << yfd << std::endl;
   std::cout << "Error of using forward difference formula is: " << e_yfd << std::endl;
+  std::cout << "Derivative of sin(pi/4) using center-difference formula is: " << ycd << std::endl;
   std::cout << "Error of using center difference formula is: " << e_ycd << std::endl;
 
   return 0;
