@@ -23,7 +23,7 @@ Both methods are compared to true value of y prime of sin(x), cos(x), to determi
 `double e_yfd = cos(pi_4)-yfd;` and 
 `double e_ycd = cos(pi_4)-ycd;`.
 
-4. Finally, print out error made by each method.
+4. Finally, print out values and error made by each method.
 Tips for running: First run program, then enter for example 
 `./hw3_diff 1e-3` in the same directory as hw3_diff.cpp file, the answer will be shown.
 
