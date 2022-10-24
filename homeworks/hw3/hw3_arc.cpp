@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-// a flost-to-string function to convert 3-D coordinate to string
+// a float-to-string function to convert 3-D coordinate to string
 std::string floatToString(float x, float y, float z) {
   std::stringstream stream;
   stream << "(";

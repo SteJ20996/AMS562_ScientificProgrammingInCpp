@@ -56,7 +56,24 @@ and allocate memory for each pointer
 `y = new float [N];`
 `z = new float [N];`
 
-4. Create two strings ma and mi to storage point coordinates corresponding to max and min arc length. Then set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points on unit sphere. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]). If reach conditions, record coordinate and update upper bound and lower bound .
+4. I write a float-to-string function to convert 3-D coordinate to string.
+   
+```
+std::string floatToString(float x, float y, float z) {
+    std::stringstream stream;
+    stream << "(";
+    stream << std::fixed << std::setprecision(6) << x;
+    stream << ", ";
+    stream << std::fixed << std::setprecision(6) << y;
+    stream << ", ";
+    stream << std::fixed << std::setprecision(6) << z;
+    stream << ")";
+    std::string s = stream.str();
+    return s;
+}
+```
+
+5. Create two strings ma and mi to storage point coordinates corresponding to max and min arc length. Then set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points on unit sphere. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]). If reach conditions, record coordinate and update upper bound and lower bound .
 
 ```
 for(int i = 0; i < N; i++){ // exact N iterations
@@ -75,7 +92,7 @@ for(int i = 0; i < N; i++){ // exact N iterations
 }
 ```
 
-5. After the for loop, print out N number, first point coordinate, max&min point coordinate and max&min arc length.
+6. After the for loop, print out N number, first point coordinate, max&min point coordinate and max&min arc length.
 
 ```
 std::cout << "When iteration count is: " << N << std::endl;
@@ -86,7 +103,7 @@ std::cout << "Max arc is: " << ub << std::endl;
 std::cout << "Min arc is: " << lb << std::endl;
 ```
 
-6. delete memory and exit program.
+7. delete memory and exit program.
 
 ```
 delete [] x;
@@ -94,7 +111,7 @@ delete [] y;
 delete [] z;
 ```
 
-7. Tips for running: First run program, then enter for example 
+8. Tips for running: First run program, then enter for example 
 `./hw3_arc 20` in the same directory as hw3_arc.cpp file, the answer will be shown.
 Because outputs are totally random, here is one output of running:
 
