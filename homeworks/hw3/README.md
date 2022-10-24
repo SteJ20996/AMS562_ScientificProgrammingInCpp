@@ -56,7 +56,7 @@ and allocate memory for each pointer
 `y = new float [N];`
 `z = new float [N];`
 
-4. Create two strings ma and mi to storage point coordinates corresponding to max and min arc length. Then set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points on unit sphere. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]), update upper bound and lower bound when reach conditions.
+4. Create two strings ma and mi to storage point coordinates corresponding to max and min arc length. Then set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points on unit sphere. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]). If reach conditions, record coordinate and update upper bound and lower bound .
 
 ```
 for(int i = 0; i < N; i++){ // exact N iterations
@@ -75,7 +75,7 @@ for(int i = 0; i < N; i++){ // exact N iterations
 }
 ```
 
-5. After the for loop, print out N number, max&min point coordinate and max&min arc length.
+5. After the for loop, print out N number, first point coordinate, max&min point coordinate and max&min arc length.
 
 ```
 std::cout << "When iteration count is: " << N << std::endl;
@@ -94,7 +94,7 @@ delete [] y;
 delete [] z;
 ```
 
-6. Tips for running: First run program, then enter for example 
+7. Tips for running: First run program, then enter for example 
 `./hw3_arc 20` in the same directory as hw3_arc.cpp file, the answer will be shown.
 Because outputs are totally random, here is one output of running:
 
