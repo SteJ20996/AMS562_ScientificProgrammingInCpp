@@ -47,6 +47,7 @@ h value: finite diff, center-diff, (cos - finite diff), (cos - center-diff)
 `double ub = 0;`
 `double lb = std::numeric_limits<double>::infinity();`
 `int N = std::atof(argv[1]);`
+Here if N <= 1, exit program, because need at least two points to compare max and min arc length.
 
 3. Set three float pointers
 `float *x = nullptr, *y = nullptr, *z = nullptr;`
@@ -55,28 +56,37 @@ and allocate memory for each pointer
 `y = new float [N];`
 `z = new float [N];`
 
-4. Set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]), compare it to other arc lengths to update upper bound and lower bound.
+4. Create two strings ma and mi to storage point coordinates corresponding to max and min arc length. Then set up a for loop, for every iteration, not reach N, use void function genPointsOnUnitSphere below this main function, to generate random points on unit sphere. Since the second iteration, calculate arc length between this point to the original point (x[0],y[0],z[0]), update upper bound and lower bound when reach conditions.
 
 ```
-for(int i = 0; i < N; ++i){ // exact N iterations
+for(int i = 0; i < N; i++){ // exact N iterations
     genPointsOnUnitSphere(N, x, y, z);
     if(i >= 1){
-        double arc=acos(x[i] * x[0] + y[i] * y[0] + z[i] * z[0]);
-        ub = std::max(arc,ub);
-        lb = std::min(arc,lb);
+        double arc = acos(x[i] * x[0] + y[i] * y[0] + z[i] * z[0]);
+        if(ub < arc){
+          ma = floatToString(x[i], y[i], z[i]);
+          ub = arc;
+        }
+        if(lb > arc){
+          mi = floatToString(x[i], y[i], z[i]);
+          lb = arc;
+        }
     }
 }
 ```
 
-After the for loop, print out N number and max&min arc length.
+5. After the for loop, print out N number, max&min point coordinate and max&min arc length.
 
 ```
 std::cout << "When iteration count is: " << N << std::endl;
+std::cout << "The first point is: " << floatToString(x[0], y[0], z[0]) << std::endl;
+std::cout << "The max-arc point is: " << ma << std::endl;
+std::cout << "The min-arc point is: " << mi << std::endl;
 std::cout << "Max arc is: " << ub << std::endl;
 std::cout << "Min arc is: " << lb << std::endl;
 ```
 
-5. delete memory and exit program.
+6. delete memory and exit program.
 
 ```
 delete [] x;
@@ -85,11 +95,14 @@ delete [] z;
 ```
 
 6. Tips for running: First run program, then enter for example 
-`./hw3_arc 9` in the same directory as hw3_arc.cpp file, the answer will be shown.
+`./hw3_arc 20` in the same directory as hw3_arc.cpp file, the answer will be shown.
 Because outputs are totally random, here is one output of running:
 
 ```
-When iteration count is: 9
-Max arc is 2.87586
-Min arc is 0.263812
+When iteration count is: 20
+The first point is: (-0.323602, 0.897656, 0.299159)
+The max-arc point is: (0.135285, -0.989109, -0.057972)
+The min-arc point is: (-0.547060, 0.835078, 0.058053)
+Max arc is: 2.82085
+Min arc is: 0.336217
 ```
