@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
         }
     }
   }
+
   std::cout << "When iteration count is: " << N << std::endl;
   std::cout << "The first point is: " << floatToString(x[0], y[0], z[0]) << std::endl;
   std::cout << "The max-arc point is: " << ma << std::endl;
@@ -66,9 +67,8 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-
+// a flost-to-string function to convert 3-D coordinate to string
 std::string floatToString(float x, float y, float z) {
-    // return std::format(runtime_format_string, "foo", "bar"); // error
   std::stringstream stream;
   stream << "(";
   stream << std::fixed << std::setprecision(6) << x;
@@ -78,8 +78,7 @@ std::string floatToString(float x, float y, float z) {
   stream << std::fixed << std::setprecision(6) << z;
   stream << ")";
   std::string s = stream.str();
-    return s;
- //   return std::vformat(runtime_format_string, std::make_format_args("foo", "bar")); // ok
+  return s;
 }
 
 // black-box function to generate a collection of random points
