@@ -38,6 +38,8 @@ h value: finite diff, center-diff, (cos - finite diff), (cos - center-diff)
 10^-16: 1.11022, 0.555112, -0.403116, 0.151995
 ```
 
+As we can see, errors made by h = 1e-16 are much bigger than other h values. I didn't list all h here, when h is from 1e-1 to 1e-8, errors are decending, after that, error grows up.
+
 #### Part II
 
 1. The same as in part I, sanity check whether argument count, argc, is provided. If not, exit the program and tell user which error was made.

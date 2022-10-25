@@ -6,6 +6,7 @@
 #include <sstream>
 #include <limits>
 
+// functions for compiling
 static void genPointsOnUnitSphere(const int N, float *x, float *y, float *z);
 static std::string floatToString(float x, float y, float z);
 
