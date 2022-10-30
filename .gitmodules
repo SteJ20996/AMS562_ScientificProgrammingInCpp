@@ -1,0 +1,3 @@
+[submodule "midterm-project"]
+	path = midterm-project
+	url = git@github.com:SteJ20996/midterm-project.git
