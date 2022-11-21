@@ -1,6 +1,9 @@
 #ifndef _ARRAY_HPP
 #define _ARRAY_HPP
 
+#include <iostream>
+#include <algorithm>
+
 class Array {
   public:
   // default constructor
