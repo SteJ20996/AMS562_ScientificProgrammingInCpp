@@ -2,7 +2,7 @@
 #define _ARRAY_HPP
 
 class Array {
- public:
+  public:
   // default constructor
   // overwrite this one to set data and size to
   // empty status
@@ -21,7 +21,10 @@ class Array {
 
   // we want to overwrite the implicit destructor
   // so that the memory is freed!
-  ~Array();
+  ~Array(){
+    delete[] _data;
+    this->_size = 0;
+  }
 
   // get the length of array
   unsigned size() const;
@@ -37,10 +40,14 @@ class Array {
   void copy(const Array &rhs);
 
   // reference entry "index" of the data
-  double &at(unsigned index);
+  double &at(unsigned index){
+    return this->_data[index];
+  }
 
   // read-only reference entry "index" of the data
-  const double &at(unsigned index) const;
+  const double &at(unsigned index) const{
+    return this->_data[index];
+  }
 
   // resize the array
   // require memory allocation and deallocation
@@ -64,10 +71,24 @@ class Array {
   double dot(const Array &rhs) const;
 
   // addition: this+rhs, return a new array
-  Array add(const Array &rhs) const;
+  Array add(const Array &rhs) const{
+    unsigned n = std::min(this->_size, rhs.size());
+    Array v(n);  // make a copy of rhs
+    for(unsigned int i = 0; i < n; i++){
+      v._data[i] = this->_data[i] + rhs._data[i];
+    }
+    return v;
+  };
 
   // subtraction: this-rhs, return a new array
-  Array sub(const Array &rhs) const;
+  Array sub(const Array &rhs) const{
+    unsigned n = std::min(this->_size, rhs.size());
+    Array v(n);  // make a copy of rhs
+    for(unsigned int i = 0; i < n; i++){
+      v._data[i] = this->_data[i] - rhs._data[i];
+    }
+    return v;
+  };
 
   // do some terminal printing
   void print() const;
@@ -76,10 +97,16 @@ class Array {
 
   // accessing operator
   double &      operator[](const unsigned index);
-  const double &operator[](const unsigned index) const;
+  const double &operator[](const unsigned index) const{
+    return this->at(index);
+  }
 
   // assignment, hint call resize if other and "this" have difference sizes
-  Array &operator=(const Array &other);
+  Array &operator=(const Array &other){
+    resize(other.size());
+    copy(other);
+    return *this;
+  }
 
  private:
   double * _data;  ///< data pointer
@@ -89,9 +116,13 @@ class Array {
 // free functions
 
 // addition of two arrays
-Array operator+(const Array &lhs, const Array &rhs);
+Array operator+(const Array &lhs, const Array &rhs){
+  return lhs.add(rhs);
+}
 
 // subtraction of two arrays
-Array operator-(const Array &lhs, const Array &rhs);
+Array operator-(const Array &lhs, const Array &rhs){
+  return lhs.sub(rhs);
+}
 
 #endif
