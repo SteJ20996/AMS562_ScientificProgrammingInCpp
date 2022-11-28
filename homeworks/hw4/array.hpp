@@ -103,7 +103,9 @@ class Array {
   // operators
 
   // accessing operator
-  double &      operator[](const unsigned index);
+  double &      operator[](const unsigned index){
+    return this->at(index);
+  }
   const double &operator[](const unsigned index) const{
     return this->at(index);
   }
