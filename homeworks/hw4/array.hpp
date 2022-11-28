@@ -30,10 +30,14 @@ class Array {
   }
 
   // get the length of array
-  unsigned size() const;
+  unsigned size() const{
+    return this->_size;
+  };
 
   // get the data pointer of array
-  double *data();
+  double *data(){
+    return _data;
+  };
 
   // get read-only pointer of array
   const double *data() const;
@@ -111,21 +115,20 @@ class Array {
     return *this;
   }
 
+  // addition of two arrays
+  friend Array operator+(const Array &lhs, const Array &rhs){
+    return lhs.add(rhs);
+  }
+
+  // subtraction of two arrays
+  friend Array operator-(const Array &lhs, const Array &rhs){
+    return lhs.sub(rhs);
+  }
  private:
   double * _data;  ///< data pointer
   unsigned _size;  ///< length of the array
 };
 
 // free functions
-
-// addition of two arrays
-Array operator+(const Array &lhs, const Array &rhs){
-  return lhs.add(rhs);
-}
-
-// subtraction of two arrays
-Array operator-(const Array &lhs, const Array &rhs){
-  return lhs.sub(rhs);
-}
 
 #endif
