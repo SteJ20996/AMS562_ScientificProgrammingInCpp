@@ -73,7 +73,7 @@ double Array::max() const{
 
 double Array::min() const{
     double mi = this->_data[0];
-    for(unsigned int i = 1; i < this->_size; i++){
+    for(unsigned int i = 0; i < this->_size; i++){
         mi = std::min(mi,this->_data[i]);
     }
     return mi;
