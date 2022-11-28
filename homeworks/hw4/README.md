@@ -21,7 +21,14 @@
 
 1. All the functions in sequence are construct array, copy, resize, finding norm, sum, max and min of array, and doing dot product.
 
-2. At the end, printout all properties of array.
+2. At the end, printout five properties of array.
+```
+Size of the array,
+The array's norm,
+The array's sum,
+The maximum value of the array,
+The minimum value of the array.
+```
 
 ###main.cpp
 
