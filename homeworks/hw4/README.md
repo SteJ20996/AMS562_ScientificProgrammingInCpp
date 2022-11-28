@@ -36,7 +36,7 @@ The minimum value of the array.
 
 1. Set two array, v1 with size 200, v2 also with size 200 but its values are half of v1. Then calculate properties of v1, v2, v1+v2 and v1-v2.
 
-2. Set v3 with size 150, to test program in case of different sizes.
+2. Set v3 with size 150, and v4 with size 300, to test program in case of different sizes.
 
 3. In the end, all properties are given true checked by me.
 
