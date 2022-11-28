@@ -13,7 +13,7 @@
 
 3. Accessing operators (line 106-111), resize the arrays don't share the same length (line 114-118).
 
-4. Finally, implement operator+ and operator- to add or substract two arrays. (line120-126)
+4. Finally, implement operator+ and operator- to add or substract two arrays. (line120-128)
 
 ###array.cpp
 
