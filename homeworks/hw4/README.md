@@ -1,8 +1,10 @@
 # README for hw4
 
-> The homework 4 contains 3 files: array.hpp, array.cpp, and main.cpp. The goal of this homework is to implement array.hpp and create array.cpp to realize all member functions mentioned in array.hpp.
+> The homework 4 contains 3 files: array.hpp, array.cpp, and main.cpp. The goal of this homework is to implement array.hpp and create array.cpp to realize all member functions mentioned in array.hpp. 
 
-###array.hpp
+> (Almost all sections of code are switched to number of lines corresponding to each file, because of the large amount of code)
+
+### array.hpp
 
 > What I need to do in this file is implementing its constructors, destructor, member functions, and free functions declared therein.
 
@@ -15,7 +17,7 @@
 
 4. Finally, implement operator+ and operator- to add or substract two arrays. (line120-128)
 
-###array.cpp
+### array.cpp
 
 > What I need to do in this file is realizing member functions in array.hpp.
 
@@ -30,7 +32,7 @@ The maximum value of the array,
 The minimum value of the array.
 ```
 
-###main.cpp
+### main.cpp
 
 > What I need to do in this file is creating a test function.
 
@@ -38,6 +40,6 @@ The minimum value of the array.
 
 2. Set v3 with size 150, and v4 with size 300, to test program in case of different sizes, in this section I test v1-v2-v3, v1+v2+v3, v1-v2-v4 and v1+v2+v4.
 
-3. In the end, all properties are given true checked by me.
+3. In the end, I check all properties and they are correct.
 
 > Running tips: Download three files, input in terminal: `g++ main.cpp array.cpp`, then `./a.out`, all output of properties will be shown.
