@@ -1,3 +1,6 @@
 [submodule "midterm-project"]
 	path = midterm-project
 	url = git@github.com:SteJ20996/midterm-project.git
+[submodule "final-project"]
+	path = final-project
+	url = git@github.com:SteJ20996/final-project.git
